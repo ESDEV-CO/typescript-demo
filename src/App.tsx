@@ -1,4 +1,6 @@
+import { log } from 'console';
 import './App.css';
+import Button from './components/Button';
 import Greet from './components/Greet';
 import Person from './components/Person';
 import PersonList from './components/PersonList';
@@ -26,10 +28,13 @@ function App() {
 
   return (
     <div className="App">
-      <Greet name='shahab' messageCount={10} isLogedIn={true} />
+      <Greet name='shahab' messageCount={11} isLogedIn={true} />
       <Person name={personName} />
       <PersonList name={nameList} />
       <Status status='error' />
+      <Button handleClick={(event, id) => {
+        console.log('Button Clicked', event, id);
+      }} />
     </div>
   );
 }
