@@ -5,6 +5,7 @@ import Greet from './components/Greet';
 import Person from './components/Person';
 import PersonList from './components/PersonList';
 import Status from './components/Status';
+import Input from './components/Input';
 
 function App() {
   const personName = {
@@ -35,6 +36,8 @@ function App() {
       <Button handleClick={(event, id) => {
         console.log('Button Clicked', event, id);
       }} />
+      <Input value='' handleChange={(event) => console.log(event)
+      } />
     </div>
   );
 }
